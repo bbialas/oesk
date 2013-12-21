@@ -3,4 +3,8 @@ oesk
 
 Second project for OESK
 
-URL: http://oesk.nodejs.megiteam.pl/
+Instalation:
+* npm install
+
+URL:
+* http://oesk.nodejs.megiteam.pl/
