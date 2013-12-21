@@ -1,9 +1,15 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'jade');
+app.set('views', './views');
+app.use(express.static('./public'));
+
 app.get('/', function(req, res){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello, node.js World !!!!\n');
+    res.render('index');
+});
+app.get('/perform-tests', function(req, res) {
+    res.render('perform-tests');
 });
 
 var ip = process.env.APP_IP || '0.0.0.0',

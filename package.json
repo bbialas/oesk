@@ -3,7 +3,8 @@
     "version": "0.0.1",
     "author": "Bartosz Bialas <bartek@int-dev.pl>",
     "description": "OESK Project 2",
-    "devDependencies": {
-        "express"    :  "*"
+    "dependencies": {
+        "express"    :  "*",
+        "jade"       :  "*"
     }
 }
