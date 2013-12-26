@@ -1,4 +1,10 @@
-require(["tests/localStorage"], function(localStorageTest){
+require([
+    "tests/localStorage",
+    "tests/sessionStorage"
+], function(
+    localStorageTest,
+    sessionStorageTest
+){
     /**
      * LocalStorage Test
      *
@@ -6,4 +12,12 @@ require(["tests/localStorage"], function(localStorageTest){
      */
     var localStorageTestPerform = new localStorageTest();
     localStorageTestPerform.performTest();
+
+    /**
+     * SessionStorage Test
+     *
+     * @type {sessionStorageTest}
+     */
+    var sessionStorageTestPerform = new sessionStorageTest();
+    sessionStorageTestPerform.performTest();
 });
