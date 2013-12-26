@@ -7,13 +7,14 @@ require([
     sessionStorageTest,
     canvasTest
 ){
+    var result = [];
     /**
      * LocalStorage Test
      *
      * @type {localStorageTest}
      */
     var localStorageTestPerform = new localStorageTest();
-    localStorageTestPerform.performTest();
+    result.push(localStorageTestPerform.performTest());
 
     /**
      * SessionStorage Test
@@ -21,7 +22,7 @@ require([
      * @type {sessionStorageTest}
      */
     var sessionStorageTestPerform = new sessionStorageTest();
-    sessionStorageTestPerform.performTest();
+    result.push(sessionStorageTestPerform.performTest());
 
     /**
      * Canvas Test
@@ -29,5 +30,15 @@ require([
      * @type {canvasTest}
      */
     var canvasTestPerform = new canvasTest();
-    canvasTestPerform.performTest();
+    result.push(canvasTestPerform.performTest());
+
+    $(function() {
+        result.forEach(function(entry) {
+            $('table').append('<tr><td>'+entry.name+'</td><td>'+entry.result+'</td></tr>');
+        });
+
+
+
+
+    });
 });

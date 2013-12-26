@@ -1,10 +1,9 @@
 html
     head
         title Performing tests
-        script(src='js/libs/require.js', data-main='js/main.js')
-        script(src='js/tests/localStorage.js')
-
+        link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
         link(rel='stylesheet', href='css/main.css')
+        script(src='//code.jquery.com/jquery-1.10.2.min.js')
     body
         h1 Hello!
         ul
@@ -12,3 +11,10 @@ html
                 a(href='/') Home
             li
                 a(href='/perform-tests') Perform tests
+        div(class='table-responsive')
+            table(class='table table-bordered table-striped')
+                tr
+                    th Test name
+                    th Test result
+        script(src='js/libs/require.js', data-main='js/main.js')
+        script(src='js/tests/localStorage.js')

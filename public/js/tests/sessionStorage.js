@@ -1,13 +1,17 @@
 define('tests/sessionStorage', function () {
     function sessionStorageTest () {
+        this.retVal = {
+            'name': 'sessionStorage'
+        };
         this.performTest = function () {
             try {
                 sessionStorage.setItem('exampleKey', 'exampleValue');
                 sessionStorage.removeItem('exampleKey');
-                return true;
+                this.retVal.result = true;
             } catch(e) {
-                return false;
+                this.retVal.result = false;
             }
+            return this.retVal;
         }
     }
     return sessionStorageTest;
