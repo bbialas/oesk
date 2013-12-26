@@ -1,7 +1,9 @@
 html
     head
         title Performing tests
-        script(src='js/main.js')
+        script(src='js/libs/require.js', data-main='js/main.js')
+        script(src='js/tests/localStorage.js')
+
         link(rel='stylesheet', href='css/main.css')
     body
         h1 Hello!
