@@ -1,9 +1,11 @@
 require([
     "tests/localStorage",
-    "tests/sessionStorage"
+    "tests/sessionStorage",
+    "tests/canvas"
 ], function(
     localStorageTest,
-    sessionStorageTest
+    sessionStorageTest,
+    canvasTest
 ){
     /**
      * LocalStorage Test
@@ -20,4 +22,12 @@ require([
      */
     var sessionStorageTestPerform = new sessionStorageTest();
     sessionStorageTestPerform.performTest();
+
+    /**
+     * Canvas Test
+     *
+     * @type {canvasTest}
+     */
+    var canvasTestPerform = new canvasTest();
+    canvasTestPerform.performTest();
 });
