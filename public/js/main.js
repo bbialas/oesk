@@ -1,11 +1,17 @@
 require([
     "tests/localStorage",
     "tests/sessionStorage",
-    "tests/canvas"
+    "tests/canvas",
+    "tests/input",
+    "tests/jpegxr",
+    "tests/png"
 ], function(
     localStorageTest,
     sessionStorageTest,
-    canvasTest
+    canvasTest,
+    inputTest,
+    jpegxrTest,
+    pngTest
 ){
     var result = [];
     /**
@@ -32,13 +38,33 @@ require([
     var canvasTestPerform = new canvasTest();
     result.push(canvasTestPerform.performTest());
 
+    /**
+     * Input Test
+     *
+     * @type {inputTest}
+     */
+    var inputTestPerform = new inputTest();
+    result.push(inputTestPerform.performTest());
+
+    /**
+     * Jpegxr Test
+     *
+     * @type {jpegxrTest}
+     */
+    var jpegxrTestPerform = new jpegxrTest();
+    result.push(jpegxrTestPerform.performTest());
+
+    /**
+     * PNG Test
+     *
+     * @type {pngTest}
+     */
+    var pngTestPerform = new pngTest();
+    result.push(pngTestPerform.performTest());
+
     $(function() {
         result.forEach(function(entry) {
             $('table').append('<tr><td>'+entry.name+'</td><td>'+entry.result+'</td></tr>');
         });
-
-
-
-
     });
 });
