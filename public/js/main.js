@@ -4,14 +4,18 @@ require([
     "tests/canvas",
     "tests/input",
     "tests/jpegxr",
-    "tests/png"
+    "tests/png",
+    "tests/audio",
+    "tests/video"
 ], function(
     localStorageTest,
     sessionStorageTest,
     canvasTest,
     inputTest,
     jpegxrTest,
-    pngTest
+    pngTest,
+    audioTest,
+    videoTest
 ){
     var result = [];
     /**
@@ -61,6 +65,22 @@ require([
      */
     var pngTestPerform = new pngTest();
     result.push(pngTestPerform.performTest());
+
+    /**
+     * Audio Test
+     *
+     * @type {audioTest}
+     */
+    var audioTestPerform = new audioTest();
+    result.push(audioTestPerform.performTest());
+
+    /**
+     * Video Test
+     *
+     * @type {videoTest}
+     */
+    var videoTestPerform = new videoTest();
+    result.push(videoTestPerform.performTest());
 
     $(function() {
         /**
