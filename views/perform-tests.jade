@@ -5,16 +5,15 @@ html
         link(rel='stylesheet', href='css/main.css')
         script(src='//code.jquery.com/jquery-1.10.2.min.js')
     body
-        h1 Hello!
-        ul
-            li
-                a(href='/') Home
-            li
-                a(href='/perform-tests') Perform tests
-        div(class='table-responsive')
-            table(class='table table-bordered table-striped')
-                tr
-                    th Test name
-                    th Test result
-        script(src='js/libs/require.js', data-main='js/main.js')
-        script(src='js/tests/localStorage.js')
+        div(class='container')
+            h1 Results<br /><small>(chrome)</small>
+            a(href='/', class='btn btn-default btn-sm btn-info') Back to Home
+
+            div(class='table-responsive')
+                table(class='table table-bordered')
+                    tr
+                        th #
+                        th Test name
+                        th Test result
+            script(src='js/libs/require.js', data-main='js/main.js')
+            script(src='js/tests/localStorage.js')

@@ -63,8 +63,19 @@ require([
     result.push(pngTestPerform.performTest());
 
     $(function() {
+        /**
+         * Browser detect
+         */
+        $('.container h1 small').text(navigator.userAgent);
+
+        /**
+         * Result show
+         *
+         * @type {number}
+         */
+        var i = 1;
         result.forEach(function(entry) {
-            $('table').append('<tr><td>'+entry.name+'</td><td>'+entry.result+'</td></tr>');
+            $('table').append('<tr class="'+(entry.result ? 'success' : 'danger')+'"><td>'+(i++)+'</td><td>'+entry.name+'</td><td><button class="btn '+(entry.result ? 'btn-success' : 'btn-danger')+'">'+(entry.result ? 'Supported' : 'Not supported')+'</button></td></tr>');
         });
     });
 });

@@ -1,1 +1,13 @@
-body {background: #EEE;}
+body {
+    background: #EEE;
+    text-align: center;
+}
+h1 {
+    margin: 80px 0 50px;
+}
+.container h1 {
+    margin: 30px 0 10px;
+}
+.container .table-responsive {
+    margin: 20px 0 0 0;
+}
