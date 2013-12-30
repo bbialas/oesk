@@ -6,7 +6,10 @@ require([
     "tests/jpegxr",
     "tests/png",
     "tests/audio",
-    "tests/video"
+    "tests/video",
+    "tests/geolocation",
+    "tests/svg",
+    "tests/webgl"
 ], function(
     localStorageTest,
     sessionStorageTest,
@@ -15,7 +18,10 @@ require([
     jpegxrTest,
     pngTest,
     audioTest,
-    videoTest
+    videoTest,
+    geolocationTest,
+    svgTest,
+    webglTest
 ){
     var result = [];
     /**
@@ -81,6 +87,30 @@ require([
      */
     var videoTestPerform = new videoTest();
     result.push(videoTestPerform.performTest());
+
+    /**
+     * Geolocation Test
+     *
+     * @type {geolocationTest}
+     */
+    var geolocationTestPerform = new geolocationTest();
+    result.push(geolocationTestPerform.performTest());
+
+    /**
+     * SVG Test
+     *
+     * @type {svgTest}
+     */
+    var svgTestPerform = new svgTest();
+    result.push(svgTestPerform.performTest());
+
+    /**
+     * WebGL Test
+     *
+     * @type {webglTest}
+     */
+    var webglTestPerform = new webglTest();
+    result.push(webglTestPerform.performTest());
 
     $(function() {
         /**
