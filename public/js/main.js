@@ -279,7 +279,7 @@ require([
 
             result.forEach(function(entry) {
                 resultObj['tests'].push({name: entry.name, result: entry.result.toString()});
-                $('table').append('<tr class="'+(entry.result ? 'success' : 'danger')+'"><td>'+(i++)+'</td><td>'+entry.name+'</td><td><button class="btn '+(entry.result ? 'btn-success' : 'btn-danger')+'">'+(entry.result ? 'Supported' : 'Not supported')+'</button></td></tr>');
+                $('table').append('<tr class="'+(entry.result ? 'success' : 'danger')+'"><td>'+(i++)+'</td><td>'+entry.name+'</td><td><a href="'+entry.url+'" target="_blank" class="btn '+(entry.result ? 'btn-success' : 'btn-danger')+'">'+(entry.result ? 'Supported' : 'Not supported')+'</a></td></tr>');
             });
             $.get('/save-results', {data:JSON.stringify(resultObj)});
         }
