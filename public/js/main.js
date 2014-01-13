@@ -25,7 +25,6 @@ require([
     "tests/fileAPI",
     "tests/meter",
     "tests/output",
-    "tests/time",
     "tests/iframeSrcdoc"
 ], function(
     localStorageTest,
@@ -54,7 +53,6 @@ require([
     fileAPITest,
     meterTest,
     outputTest,
-    timeTest,
     iframeSrcdocTest
 ){
     var result = [];
@@ -257,14 +255,6 @@ require([
     var outputTestPerform = new outputTest();
     result.push(outputTestPerform.performTest());
     /**
-     * Time
-     *
-     * @type {timeTest}
-     */
-
-    var timeTestPerform = new timeTest();
-    result.push(timeTestPerform.performTest());
-    /**
      * iframe Srcdoc
      *
      * @type {iframeSrcdocTest}
@@ -273,19 +263,39 @@ require([
     result.push(iframeSrcdocTestPerform.performTest());
 
     $(function() {
-        /**
-         * Browser detect
-         */
-        $('.container h1 small').text(navigator.userAgent);
+        if ($('.test-results').size()) {
+            /**
+             * Browser detect
+             */
+            $('.container h1 small').text(navigator.userAgent);
 
-        /**
-         * Result show
-         *
-         * @type {number}
-         */
-        var i = 1;
-        result.forEach(function(entry) {
-            $('table').append('<tr class="'+(entry.result ? 'success' : 'danger')+'"><td>'+(i++)+'</td><td>'+entry.name+'</td><td><button class="btn '+(entry.result ? 'btn-success' : 'btn-danger')+'">'+(entry.result ? 'Supported' : 'Not supported')+'</button></td></tr>');
-        });
+            /**
+             * Result show
+             *
+             * @type {number}
+             */
+            var i = 1,
+                resultObj = {'browser':navigator.userAgent, tests: Array()};
+
+            result.forEach(function(entry) {
+                resultObj['tests'].push({name: entry.name, result: entry.result.toString()});
+                $('table').append('<tr class="'+(entry.result ? 'success' : 'danger')+'"><td>'+(i++)+'</td><td>'+entry.name+'</td><td><button class="btn '+(entry.result ? 'btn-success' : 'btn-danger')+'">'+(entry.result ? 'Supported' : 'Not supported')+'</button></td></tr>');
+            });
+            $.get('/save-results', {data:JSON.stringify(resultObj)});
+        }
+        if ($('.test-stats').size()) {
+            $.get('/get-stats', function (data) {
+                var i = 1;
+                for (key in data) {
+                    var successTest = 0;
+                    for (key2 in data[key].tests) {
+                        if (data[key].tests[key2].result == 'true') {
+                            successTest = successTest+1;
+                        }
+                    }
+                    $('table').append('<tr><td>'+(i++)+'</td><td>'+data[key].browser+'</td><td>'+successTest+'/'+data[key].tests.length+'</td></tr>');
+                }
+            });
+        }
     });
 });

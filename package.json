@@ -5,6 +5,7 @@
     "description": "OESK Project 2",
     "dependencies": {
         "express"    :  "*",
-        "jade"       :  "*"
+        "jade"       :  "*",
+        "mongoose"   :  "*"
     }
 }

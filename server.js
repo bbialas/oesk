@@ -1,5 +1,6 @@
-var express = require('express');
-var app = express();
+var express = require('express'),
+    app = express(),
+    router = require('./routes/router');
 
 app.set('view engine', 'jade');
 app.set('views', './views');
@@ -11,6 +12,11 @@ app.get('/', function(req, res){
 app.get('/perform-tests', function(req, res) {
     res.render('perform-tests');
 });
+app.get('/stats', function(req, res) {
+    res.render('stats');
+});
+app.get('/save-results', router.saveResults);
+app.get('/get-stats', router.getStats);
 
 var ip = process.env.APP_IP || '0.0.0.0',
     port = parseInt(process.env.APP_PORT || '8000');
