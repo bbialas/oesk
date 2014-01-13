@@ -1,7 +1,8 @@
 define('tests/output', function () {
     function outputTest () {
         this.retVal = {
-            'name': 'Output'
+            'name': 'Output',
+            'url': 'http://www.w3.org/TR/html5/forms.html#the-output-element'
         };
         this.performTest = function () {
             this.retVal.result = 'value' in document.createElement('output');

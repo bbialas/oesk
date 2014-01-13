@@ -1,7 +1,8 @@
 define('tests/audio', function () {
     function audioTest () {
         this.retVal = {
-            'name': 'audio'
+            'name': 'audio',
+            'url': 'http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element'
         };
         this.performTest = function () {
             var elem = document.createElement('audio');

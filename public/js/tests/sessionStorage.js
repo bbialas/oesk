@@ -1,7 +1,8 @@
 define('tests/sessionStorage', function () {
     function sessionStorageTest () {
         this.retVal = {
-            'name': 'sessionStorage'
+            'name': 'sessionStorage',
+            'url': 'http://www.w3.org/TR/webstorage/'
         };
         this.performTest = function () {
             try {

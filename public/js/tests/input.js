@@ -1,7 +1,8 @@
 define('tests/input', function () {
     function inputTest () {
         this.retVal = {
-            'name': 'input[type="datetime"]'
+            'name': 'input[type="datetime"]',
+            'url': 'http://www.w3.org/TR/html5/forms.html'
         };
         this.performTest = function () {
             var elem = document.createElement('input');

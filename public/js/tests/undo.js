@@ -1,7 +1,8 @@
 define('tests/undo', function () {
     function undoTest () {
         this.retVal = {
-            'name': 'Undo'
+            'name': 'Undo',
+            'url': '#'
         };
         this.performTest = function () {
             this.retVal.result = typeof UndoManager !== 'undefined';

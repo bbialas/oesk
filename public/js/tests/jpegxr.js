@@ -1,7 +1,8 @@
 define('tests/jpegxr', function () {
     function jpegxrTest () {
         this.retVal = {
-            'name': 'jpegxr'
+            'name': 'jpegxr',
+            'url': 'http://en.wikipedia.org/wiki/JPEG_XR'
         };
         this.performTest = function () {
             var image = new Image();

@@ -1,7 +1,8 @@
 define('tests/png', function () {
     function pngTest () {
         this.retVal = {
-            'name': 'png'
+            'name': 'png',
+            'url': 'http://www.w3.org/TR/compositing-1/#canvascompositingandblending'
         };
         this.performTest = function () {
             var image = new Image();

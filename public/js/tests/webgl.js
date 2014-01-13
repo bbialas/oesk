@@ -1,7 +1,8 @@
 define('tests/webgl', function () {
     function webglTest () {
         this.retVal = {
-            'name': 'WebGL'
+            'name': 'WebGL',
+            'url': 'http://docs.webplatform.org/wiki/webgl'
         };
         this.performTest = function () {
             this.retVal.result = 'WebGLRenderingContext' in window;

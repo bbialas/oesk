@@ -1,7 +1,8 @@
 define('tests/localStorage', function () {
     function localStorageTest () {
         this.retVal = {
-            'name': 'localStorage'
+            'name': 'localStorage',
+            'url': 'http://www.w3.org/TR/webstorage/'
         };
         this.performTest = function () {
             try {

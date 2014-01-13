@@ -1,7 +1,8 @@
 define('tests/video', function () {
     function videoTest () {
         this.retVal = {
-            'name': 'video'
+            'name': 'video',
+            'url': 'http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element'
         };
         this.performTest = function () {
             var elem = document.createElement('video');
