@@ -20,8 +20,8 @@ exports.saveResults = function(req, res) {
 
     var dataObj = JSON.parse(req.query.data),
         testCase = new Results(
-        {date: new Date(), browser: dataObj.browser, tests: dataObj.tests}
-    );
+            {date: new Date(), browser: dataObj.browser, tests: dataObj.tests}
+        );
 
     testCase.save(function(err) {
         if (err) {
