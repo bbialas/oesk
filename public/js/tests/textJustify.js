@@ -1,7 +1,7 @@
 define('tests/textJustify', function () {
     function textJustifyTest () {
         this.retVal = {
-            'name': 'CSS Text: text-justify',
+            'name': 'CSS3 Text: text-justify',
             'url': 'http://dev.w3.org/csswg/css-text/#text-justify-property'
 
         };
