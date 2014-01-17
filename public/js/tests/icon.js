@@ -1,7 +1,7 @@
 define('tests/icon', function () {
     function iconTest () {
         this.retVal = {
-            'name': 'CSS Basic User Interface: icon',
+            'name': 'CSS3 Basic User Interface: icon',
             'url': 'http://dev.w3.org/csswg/css-ui/#icon'
 
         };
