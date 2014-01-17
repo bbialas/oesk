@@ -1,7 +1,7 @@
 define('tests/boxSizing', function () {
     function boxSizingTest () {
         this.retVal = {
-            'name': 'CSS Basic User Interface: box-sizing',
+            'name': 'CSS3 Basic User Interface: box-sizing',
             'url': 'http://dev.w3.org/csswg/css-ui/#box-sizing'
 
         };
