@@ -1,7 +1,7 @@
 define('tests/textIndent', function () {
     function textIndentTest () {
         this.retVal = {
-            'name': 'CSS Text: text-indent',
+            'name': 'CSS3 Text: text-indent',
             'url': 'http://dev.w3.org/csswg/css-text/#text-indent-property'
 
         };
