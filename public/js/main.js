@@ -25,7 +25,18 @@ require([
     "tests/fileAPI",
     "tests/meter",
     "tests/output",
-    "tests/iframeSrcdoc"
+    "tests/iframeSrcdoc",
+    "tests/backgroundColor",
+    "tests/backgroundImage",
+    "tests/borderColor",
+    "tests/icon",
+    "tests/boxSizing",
+    "tests/resize",
+    "tests/textTransform",
+    "tests/textJustify",
+    "tests/textIndent",
+    "tests/textShadow",
+    "tests/textDecoration"
 ], function(
     localStorageTest,
     sessionStorageTest,
@@ -53,7 +64,18 @@ require([
     fileAPITest,
     meterTest,
     outputTest,
-    iframeSrcdocTest
+    iframeSrcdocTest,
+    backgroundColorTest,
+    backgroundImageTest,
+    borderColorTest,
+    iconTest,
+    boxSizingTest,
+    resizeTest,
+    textTransformTest,
+    textJustifyTest,
+    textIndentTest,
+    textShadowTest,
+    textDecorationTest
 ){
     var result = [];
     /**
@@ -261,6 +283,41 @@ require([
      */
     var iframeSrcdocTestPerform = new iframeSrcdocTest();
     result.push(iframeSrcdocTestPerform.performTest());
+
+    var backgroundColorTestPerform = new backgroundColorTest();
+    result.push(backgroundColorTestPerform.performTest());
+
+    var backgroundImageTestPerform = new backgroundImageTest();
+    result.push(backgroundImageTestPerform.performTest());
+
+    var borderColorTestPerform = new borderColorTest();
+    result.push(borderColorTestPerform.performTest());
+
+    var iconTestPerform = new iconTest();
+    result.push(iconTestPerform.performTest());
+
+    var boxSizingTestPerform = new boxSizingTest();
+    result.push(boxSizingTestPerform.performTest());
+
+    var resizeTestPerform = new resizeTest();
+    result.push(resizeTestPerform.performTest());
+
+    var textTransformTestPerform = new textTransformTest();
+    result.push(textTransformTestPerform.performTest());
+
+
+    var textJustifyTestPerform = new textJustifyTest();
+    result.push(textJustifyTestPerform.performTest());
+
+    var textIndentTestPerform = new textIndentTest();
+    result.push(textIndentTestPerform.performTest());
+
+    var textShadowTestPerform = new textShadowTest();
+    result.push(textShadowTestPerform.performTest());
+
+    var textDecorationTestPerform = new textDecorationTest();
+    result.push(textDecorationTestPerform.performTest());
+
 
     $(function() {
         if ($('.test-results').size()) {
