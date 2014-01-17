@@ -1,7 +1,7 @@
 define('tests/backgroundColor', function () {
     function backgroundColorTest () {
         this.retVal = {
-            'name': 'CSS Backgrounds: background-color',
+            'name': 'CSS3 Backgrounds: background-color',
             'url': 'http://dev.w3.org/csswg/css-backgrounds/#the-background-color'
 
         };
