@@ -1,7 +1,7 @@
 define('tests/borderColor', function () {
     function borderColorTest () {
         this.retVal = {
-            'name': 'CSS Backgrounds: border-color',
+            'name': 'CSS3 Backgrounds: border-color',
             'url': 'http://dev.w3.org/csswg/css-backgrounds/#the-border-color'
 
         };
