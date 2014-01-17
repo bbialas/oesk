@@ -25,7 +25,18 @@ require([
     "tests/fileAPI",
     "tests/meter",
     "tests/output",
-    "tests/iframeSrcdoc"
+    "tests/iframeSrcdoc",
+    "tests/backgroundColor",
+    "tests/backgroundImage",
+    "tests/borderColor",
+    "tests/icon",
+    "tests/boxSizing",
+    "tests/resize",
+    "tests/textTransform",
+    "tests/textJustify",
+    "tests/textIndent",
+    "tests/textShadow",
+    "tests/textDecoration"
 ], function(
     localStorageTest,
     sessionStorageTest,
@@ -53,7 +64,18 @@ require([
     fileAPITest,
     meterTest,
     outputTest,
-    iframeSrcdocTest
+    iframeSrcdocTest,
+    backgroundColorTest,
+    backgroundImageTest,
+    borderColorTest,
+    iconTest,
+    boxSizingTest,
+    resizeTest,
+    textTransformTest,
+    textJustifyTest,
+    textIndentTest,
+    textShadowTest,
+    textDecorationTest
 ){
     var result = [];
     /**
@@ -261,6 +283,85 @@ require([
      */
     var iframeSrcdocTestPerform = new iframeSrcdocTest();
     result.push(iframeSrcdocTestPerform.performTest());
+    /**
+     * backgroundColor
+     *
+     * @type {backgroundColorTest}
+     */
+    var backgroundColorTestPerform = new backgroundColorTest();
+    result.push(backgroundColorTestPerform.performTest());
+    /**
+     * backgroundImage
+     *
+     * @type {backgroundImageTest}
+     */
+    var backgroundImageTestPerform = new backgroundImageTest();
+    result.push(backgroundImageTestPerform.performTest());
+    /**
+     * borderColorTest
+     *
+     * @type {borderColorTest}
+     */
+    var borderColorTestPerform = new borderColorTest();
+    result.push(borderColorTestPerform.performTest());
+    /**
+     * iconTest
+     *
+     * @type {iconTest}
+     */
+    var iconTestPerform = new iconTest();
+    result.push(iconTestPerform.performTest());
+    /**
+     * boxSizingTest
+     *
+     * @type {boxSizingTest}
+     */
+    var boxSizingTestPerform = new boxSizingTest();
+    result.push(boxSizingTestPerform.performTest());
+    /**
+     * resizeTest
+     *
+     * @type {resizeTest}
+     */
+    var resizeTestPerform = new resizeTest();
+    result.push(resizeTestPerform.performTest());
+    /**
+     * textTransformTest
+     *
+     * @type {textTransformTest}
+     */
+    var textTransformTestPerform = new textTransformTest();
+    result.push(textTransformTestPerform.performTest());
+
+    /**
+     * textJustifyTest
+     *
+     * @type {textJustifyTest}
+     */
+    var textJustifyTestPerform = new textJustifyTest();
+    result.push(textJustifyTestPerform.performTest());
+    /**
+     * textIndentTest
+     *
+     * @type {textIndentTest}
+     */
+    var textIndentTestPerform = new textIndentTest();
+    result.push(textIndentTestPerform.performTest());
+    /**
+     * textShadowTest
+     *
+     * @type {textShadowTest}
+     */
+    var textShadowTestPerform = new textShadowTest();
+    result.push(textShadowTestPerform.performTest());
+    /**
+     * textDecorationTest
+     *
+     * @type {textDecorationTest}
+     */
+    var textDecorationTestPerform = new textDecorationTest();
+    result.push(textDecorationTestPerform.performTest());
+
 
     $(function() {
         if ($('.test-results').size()) {
