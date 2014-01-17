@@ -1,7 +1,7 @@
 define('tests/backgroundImage', function () {
     function backgroundImageTest () {
         this.retVal = {
-            'name': 'CSS Backgrounds: background-image',
+            'name': 'CSS3 Backgrounds: background-image',
             'url': 'http://dev.w3.org/csswg/css-backgrounds/#the-background-image'
 
         };
